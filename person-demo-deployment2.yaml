@@ -15,5 +15,6 @@ spec:
       containers:
         - name: k8s-test-repo
           image: chioo7/k8s-test-repo:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 1234
