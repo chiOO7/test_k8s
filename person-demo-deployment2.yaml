@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: chioo7/k8s-test-repo
+  name: k8s-test-repo
 spec:
   selector:
       matchLabels:
