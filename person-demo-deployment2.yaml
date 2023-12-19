@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chioo7/k8s-test-repo
+spec:
+  selector:
+      matchLabels:
+        app: chioo7/k8s-test-repo
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: chioo7/k8s-test-repo
+    spec:
+      containers:
+        - name: chioo7/k8s-test-repo
+          image: chioo7/k8s-test-repo
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 1234
